@@ -1,1 +1,28 @@
+<!doctype html>
+<html>
 
+<head>
+    <title>Usahealthlife</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" href="img/usalogodesign.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div id="navbar"></div> <!-- Placeholder for the navigation bar -->
+    </header>
+    <main>
+        <section>
+
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+        // Load the navigation bar dynamically
+        document.getElementById('navbar').innerHTML = fetch('navbar.html').then(response => response.text());
+    </script>
+</body>
+
+</html>
