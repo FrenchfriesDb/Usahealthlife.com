@@ -5,19 +5,27 @@
     <title>Usahealthlife</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="img/usalogodesign.png" width="32px" height="32px" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/usalogodesign.png" type="image/x-icon">
 </head>
 
 <body>
+    <header>
     <nav>
-  <ul>
-      <li><a href="Home.html">Home</a></li>
-      <li><a href="Search.html">Search</a></li>
-      <li><a href="About.html">About Us</a></li>
-      <li><a href="Login.html">Login</a></li>
-  </ul>
+    <div id="navbar"></div> <!-- navbar-->
     </nav>
+    </header>
+    <main>
+<section>
+    
+</section>
+    </main>
+
+    <footer></footer>
+    <script>
+        // Load the navigation bar dynamically
+        document.getElementById('navbar').innerHTML = fetch('navbar.html').then(response => response.text());
+    </script>
 </body>
 
 </html>
