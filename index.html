@@ -22,10 +22,16 @@
     </main>
 
     <footer></footer>
-    <script>
+     <script>
         // Load the navigation bar dynamically
-        document.getElementById('navbar').innerHTML = fetch('navbar.html').then(response => response.text());
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
     </script>
+</body>
 </body>
 
 </html>
