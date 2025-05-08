@@ -1,17 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dancing+Script:wght@400..700&family=Kablammo&family=Playwrite+MX+Guides&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dancing+Script:wght@400..700&family=Kablammo&family=Playwrite+MX+Guides&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Xanh+Mono:ital@0;1&display=swap');
 /*fonts yk cuz*/
-ul {
+.navbar ul {
   list-style-type: none;
   margin: 0;
   padding: 0; /* Remove padding for full-width */
   overflow-x: auto;
   overflow-y: hidden; /* Hide vertical overflow */
-  position: sticky;
-  top: 0; /* Stick to the top */
-  width: 100%;
-  background-color: rgb(180, 207, 209); /* Background color for the navbar */
-  z-index: 1000; /* makes it stays on top */
+  width: 100%; /* Full width */
   display: flex; /* Use flexbox for alignment */
   justify-content: center; /* Center the items horizontally */
   align-items: center; /* Center the items vertically */
@@ -19,12 +15,11 @@ ul {
 /*for debbie, overflow is when the content goes out of the element*/
 li a {
   display: inline-block; /* Ensure proper spacing */
-  padding: 16px; /* Increase padding for better appearance */
-  background-color: rgb(180, 207, 209);
+  padding: 16px; /* Increase padding for better appearance */  
   text-decoration: none;
   font-family: arial; /* Ensure font-family is applied */
   text-align: center; /* Center the text inside the links */
-  color: black;
+  color: rgba(255, 255, 255, 0.425);
   width: auto; /* Adjust width */
   transition: all 0.3s ease; /* Add smooth transition for hover */
 }
@@ -33,9 +28,109 @@ li {
     display: inline-block; /* Ensure items are inline */
 }
 
+
+.navbar a.active {
+  color: rgba(0, 21, 37, 0.514);
+  font-weight: bold;;
+}
+
 li a:hover {
   animation-timing-function: ease-in-out;
-  background-color: rgb(139, 161, 162); /* Change background color on hover */
-  color: rgb(0, 0, 0); /* Change text color on hover */
+    color: rgba(0, 0, 0, 0.137); /* Change text color on hover */
   transform: scale(1.3); /* Add a slight zoom effect */
+}
+
+
+
+.navbar {
+  background: linear-gradient(180deg, rgba(0, 46, 73, 0.932), rgba(51, 207, 255, 0.932)); /* Gradient background */
+  position: sticky;
+  margin: 0px;
+  top: 0;
+  left:0;
+  right: 0;
+  padding: 10px 0;
+  z-index: 1000; /* Ensure it stays on top */
+  width: 100vw;
+  border-radius: 0px 0px 20px 20px; /* Rounded corners */
+  box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background: linear-gradient(180deg, rgb(0, 51, 80), rgb(0, 133, 173));
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.212);
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 10px;
+}
+
+footer h2 {
+  font-size: 15px;
+  margin: 0;
+  text-align: center;
+}
+
+.copyright {
+  border-top: 3px solid black;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding : 10px 0;
+
+}
+
+.copyright p {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+
+}
+
+address {
+  font-style: normal;
+  text-decoration: none;
+  text-align: center;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.social-media a {
+  margin: 0 10px; /* Space between icons */
+}
+
+
+.social-media {
+  display: flex;
+ 
+}
+
+.footer-columns .column {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  border: linear-gradient(90deg, rgb(8, 0, 0), rgb(107, 0, 0)) 5px solid; /* Border with gradient */
+
+}
+
+.footer-columns .column:last-child {
+  border-right: none; /* Remove border from last column */
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
 }
