@@ -11,36 +11,19 @@
 
 <body>
     <header>
-    <nav>
-    <div id="navbar"></div> <!-- navbar-->
-    </nav>
+       
     </header>
+    <div id="navbar-placeholder"></div>
     <main>
         <h1 style="font-family:arial;font-size:60px;color:#FF1D80">Usahealthlife</h1>
-    <hr>
+    
 <section>
     
 </section>
     </main>
 
-    <footer>
-        <a href="https://www.instagram.com/usahealthlifecom/" target="_blank">
-            <img src="img/instagramlogo.png" alt="instagram logo"  style="width:80px;height:80px">
-        </a>
-        <a href="https://www.tiktok.com/@usahealthlife" target="_blank">
-            <img src="img/tiktoklogo.jpg" alt="tiktok logo" style="width:80px;height:80px;">
-        </a>
-    </footer>
-     <script>
-        // Load the navigation bar dynamically
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar').innerHTML = html;
-            })
-            .catch(error => console.error('Error loading navbar:', error));
-    </script>
-</body>
+    <div id="footer-placeholder"></div>
+    <script src="js/load-navbar-footer.js"></script>
 </body>
 
 </html>
