@@ -243,7 +243,7 @@ nav {
 
 /* Style individual items like product cards */
 .item-container > .item {
-  margin: 0 0 300px 0 ; /* Remove extra margin */
+  margin: 0 0 0px 0 ; /* Remove extra margin */
   padding: 15px; /* Add padding inside the card */
   font-size: 16px; /* Adjust font size */
   width: 200px; /* Set a fixed width for items */
@@ -307,6 +307,9 @@ nav {
 
 /* For medium screens (tablets) */
 @media (max-width: 768px) {
+  #welcome {
+    font-size: 50px;
+  }
   .item-container > .item {
     width: 150px; /* Shrink item width for medium screens */
     font-size: 12px;
@@ -315,8 +318,13 @@ nav {
 
 /* For small screens (mobile phones) */
 @media (max-width: 480px) {
+
+  #welcome {
+    font-size: 30px;
+  }
   .item-container {
     justify-content: center; /* Center items on small screens */
+
   }
 
   .item-container > .item {
