@@ -49,13 +49,13 @@
   padding: 10px;
   text-decoration: none;
   font-family: Arial, sans-serif;
-  color: rgba(255, 255, 255, 0.425);
+  color: rgba(255, 255, 255, 0.256);
   transition: all 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: rgba(0, 0, 0, 0.137);
-  transform: scale(1.3);
+  color: rgba(0, 0, 0, 0.332); /* Change text color on hover */
+  transform: scale(1.2); /* Add a slight zoom effect */
 }
 
 .navbar a.active {
@@ -77,14 +77,18 @@ footer {
   font-size: 16px;
   padding: 10px;
   box-sizing: border-box;
+  max-width: 100%;
+  min-width: 100%;  
 }
 
 /* Add this to your html and body */
 html, body {
   height: 100%;
   margin: 0;
+  display: flex;
   padding: 0;
   background-color: #e8f4ff;
+  flex-direction: column;
 }
 
 /* Create a flex container for your page */
@@ -97,6 +101,7 @@ body {
 /* Make sure your main content grows to push footer down */
 main {
   flex: 1 0 auto;
+  position: relative;
 }
 
 footer h2 {
@@ -134,33 +139,13 @@ address {
 }
 
 
-li a:active {
-  background-color: rgb(139, 161, 162); /* Change background color on click */
-  color: rgb(0, 0, 0); /* Change text color on click */
-  transform: scale(1.3); /* Add a slight zoom effect */
-}
-
-li a:hover {
-  animation-timing-function: ease-in-out;
-  background-color: rgb(139, 161, 162); /* Change background color on hover */
-  color: rgb(0, 0, 0); /* Change text color on hover */
-  transform: scale(1.3); /* Add a slight zoom effect */
-}
 
 .social-media {
   display: flex;
 }
 
 
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* Ensure it stays on top */
-  padding: 10px 0;
-  background: linear-gradient(180deg, rgb(19, 136, 37), rgb(102, 239, 102)); /* Background color for the navbar */
-  border-radius: 0px 0px 15px 15px;
-  width: 100%;
-}
+
 
 
 
@@ -168,7 +153,7 @@ nav {
   flex: 1;
   padding: 10px;
   text-align: center;
-  border: linear-gradient(90deg, rgb(8, 0, 0), rgb(107, 0, 0)) 5px solid; /* Border with gradient */
+  border-right: 4px solid rgba(255, 255, 255, 0.1);
 
 }
 
@@ -271,7 +256,7 @@ nav {
 
 .item-container > .item:hover {
   transform: scale(1.05); /* Slight zoom on hover */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), -2px -2px 10px 1px white; /* Enhance shadow on hover */
 }
 
 .item p {
@@ -332,4 +317,46 @@ nav {
     font-size: 10px; /* Adjust font size for smaller items */
     padding: 10px; /* Reduce padding */
   }
+}
+
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+  width: 300px;
+  overflow-x: scroll;
+  margin: 80px auto;
+  scroll-snap-type: x mandatory;
+}
+
+.card {
+  scroll-snap-align: center;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  border-radius: 14px;
+  text-align: center;
+  background-color: #ffddf1;
+  width: 300px;
+  flex-shrink: 0;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+.card:nth-child(1) {
+  background-color: #feffdd;
+}
+
+.card:nth-child(2) {
+  background-color: #e9ffe9;
+}
+.card:nth-child(3) {
+  background-color: #d3e9ff;
+}
+.card:nth-child(4) {
+  background-color: #ffddf1;
+}
+.card:nth-child(5) {
+  background-color: #feffdd;
+}
+.card:nth-child(6) {
+  background-color: #f7d7ff;
 }
