@@ -9,13 +9,30 @@
     <link rel="icon" href="img/usalogodesign.png" type="image/x-icon">
 </head>
 
-<b>
-    <header>
-        
-    </header>
-    <div id="navbar-placeholder"></div>
+
+<body>
     <main>
+       
+  
+
         <section>
+            <div class="login-container">
+                <h1 id="login">Login</h1>
+                <form action="login.php" method="post">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+                <div class="login-alternatives">
+                    <p id="forgot-password"><a href="Forgot-password.html">Forgot Password?</a></p>
+                <p id="register-here">Don't have an account? <a href="Register.html">Register here</a></p>
+                </div>
+                
+            </div>
 
         </section>
     </main>
