@@ -408,7 +408,8 @@ address {
 }
 .login-container label {
   font-size: 24px;
-  color: navy;
+  font-weight: bold;
+  color: rgb(0, 51, 98);
   font-family: Arial, Helvetica, sans-serif;
   margin: 50px 0 20px 0; /* Center the title */
   padding: 30px;
@@ -426,6 +427,11 @@ address {
   padding: 10px;
 }
 
+.login-container input[type="text"]:focus, .login-container input[type="password"]:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.522);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.515);
+}
 
 .login-container button[type="submit"] {
   background: linear-gradient(90deg, rgb(111, 202, 255), rgb(39, 147, 255),rgba(0, 109, 234, 0.932),rgb(0, 92, 212));
