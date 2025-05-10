@@ -278,16 +278,58 @@ address {
 .item button {
   font-family: Arial, sans-serif;
   font-size: 14px;
-  background-color: #85aeda; /* Blue button */
-  color: white; /* White text */
+  padding: 15px 20px;
+  color: white;
   border: none;
-  padding: 8px 12px;
-  margin-top: 10px;
+  outline: none;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
 }
 
+
+.item button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333; /* Blue button */
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.item button::before {
+  content: "";
+  background: linear-gradient(45deg, #FF0000, #FF7300, #FFFA00, #FFFF00, #9AFF00, #00FF00, #00A3FF, #0000FF, #7300FF, #FF00D3, #FF0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(10px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0,0;
+  }
+  50% {
+    background-position: 400%,0;
+  }
+  100% {
+    background-position: 0,0;
+  }
+  
+}
 .item button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
