@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+
 
 <head>
     <title>Usahealthlife</title>
@@ -11,24 +11,17 @@
 
 <body>
     <header>
-        <div id="navbar"></div> <!-- Placeholder for the navigation bar -->
+        
     </header>
+    <div id="navbar-placeholder"></div> <!-- Placeholder for the navigation bar -->
     <main>
         <section>
 
         </section>
     </main>
-    <footer></footer>
-      <script>
-        // Load the navigation bar dynamically
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('navbar').innerHTML = html;
-            })
-            .catch(error => console.error('Error loading navbar:', error));
-    </script>
-</body>
+    <div id="footer-placeholder"></div> <!-- Placeholder for the footer -->
+
+    <script src="js/load-navbar-footer.js"></script> <!-- Load the JavaScript file to insert navbar and footer -->
 </body>
 
 </html>
