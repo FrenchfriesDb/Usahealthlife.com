@@ -560,3 +560,17 @@ address {
     width: 30%;
   }
 }
+
+.item button:hover::before {
+  opacity: 1;
+}
+
+
+.item button:active::after {
+  background: transparent;
+}
+
+.item button:active {
+  color: black;
+  font-weight: bold;
+}
