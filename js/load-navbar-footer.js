@@ -1,31 +1,28 @@
+document.addEventListener('DOMContentLoaded', () => {
+  // Load navbar and footer in parallel
+  const loadPromises = [
+    fetch('includes/navbar.html').then(res => res.text()),
+    fetch('includes/footer.html').then(res => res.text())
+  ];
 
-fetch('includes/navbar.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('navbar-placeholder').innerHTML = data;
-  });
+  Promise.all(loadPromises)
+    .then(([navbarData, footerData]) => {
+      // Insert navbar and footer
+      document.getElementById('navbar-placeholder').innerHTML = navbarData;
+      document.getElementById('footer-placeholder').innerHTML = footerData;
 
-// footer lollll
-fetch('includes/footer.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('footer-placeholder').innerHTML = data;
-  });
+      // Set up current page highlighting
+      const currentPage = window.location.pathname.split('/').pop();
+      const navLinks = document.querySelectorAll('.navbar a');
 
-
-fetch('includes/navbar.html')
-.then(response => response.text())
-.then(data => {
-  document.getElementById('navbar-placeholder').innerHTML = data;
-  
-  
-  const currentPage = window.location.pathname.split('/').pop(); 
-  const navLinks = document.querySelectorAll('.navbar a');
-
-  navLinks.forEach(link => {
-    const linkPage = link.getAttribute('href').split('/').pop(); // Gets "about.html" from href
-    if (linkPage === currentPage) {
-      link.classList.add('active'); // Adds class ONLY to the current tab
-    }
-  });
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href').split('/').pop();
+        if (linkPage === currentPage) {
+          link.classList.add('active');
+        }
+      });
+    })
+    .catch(error => {
+      console.error('Error loading components:', error);
+    });
 });

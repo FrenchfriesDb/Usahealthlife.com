@@ -7,7 +7,7 @@
   top: 0;
   padding: 10px 20px;
   z-index: 1000;
-  min-width: 100%;
+  width: 100%;
   border-radius: 0px 0px 20px 20px;
   box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -15,8 +15,8 @@
   align-items: center;
   margin:0px;
   box-sizing: border-box;
-  overflow: hidden; /* Add this line to prevent horizontal scrolling */;
 }
+
 
 .site-title {
   font-weight: bold;
@@ -85,23 +85,22 @@ footer {
 html, body {
   height: 100%;
   margin: 0;
-  display: flex;
   padding: 0;
   background-color: #e8f4ff;
-  flex-direction: column;
+
+
 }
 
 /* Create a flex container for your page */
 body {
-  display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Use viewport height */
+  display: flex;
+  min-height: 100vh; /* Ensure the body takes full height */
 }
 
 /* Make sure your main content grows to push footer down */
 main {
   flex: 1 0 auto;
-  position: relative;
 }
 
 footer h2 {
@@ -145,15 +144,14 @@ address {
 }
 
 
-
-
-
-
 .footer-columns .column {
   flex: 1;
   padding: 10px;
   text-align: center;
-  border-right: 4px solid rgba(255, 255, 255, 0.1);
+  /* border-right: 4px solid rgba(255, 255, 255, 0.1); */
+  flex-direction: row;
+  justify-content: space-evenly;
+  display: flex;
 
 }
 
@@ -169,7 +167,7 @@ address {
 
 
 /* For medium screens */
-@media (max-width: 768px) {
+@media (max-width: 668px) {
   footer {
     font-size: 14px;
     padding: 8px;
@@ -203,6 +201,18 @@ address {
   .social-media a {
     margin: 0 5px;
   }
+
+  .login-container {
+    padding: 15px;
+  }
+
+  .login-container h1 {
+    font-size: 20px;
+  }
+
+  .login-container button[type="submit"] {
+    font-size: 14px;
+  }
 }
 
 #welcome {
@@ -221,7 +231,7 @@ address {
   flex-wrap: wrap;
   justify-content: center; /* Align items to the start */
   gap: 20px; /* Add spacing between items */
-  margin: auto; /* Center the container */
+  margin: auto auto 20px auto; /* Center the container */
   max-width: 1200px; /* Limit the container width */
   padding: 10px; /* Add padding around the container */
 }
@@ -359,4 +369,146 @@ address {
 }
 .card:nth-child(6) {
   background-color: #f7d7ff;
+}
+
+#login {
+  /* Remove position: absolute - this was causing overlap */
+  
+  font-size: 30px;
+  text-align: center;
+  color: navy;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 30px auto;
+}
+
+.login-container {
+  width: 30%; /* Flexible width */
+  max-width: 400px; /* Maximum width */
+  min-width: 280px; /* Minimum width */
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px; /* Fixed maximum width*/
+  height: 60vh; /* Full viewport height */
+  background-color: #e8f4ff4f; /* Light background color */
+  
+  margin: 20px auto 20px auto; /* Center horizontally */
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+  padding: 40px 20px 40px 20px;
+  backdrop-filter: blur(10px); /* Optional: add a blur effect */
+}
+
+.login-container > * {
+  margin: 0; /* Reset margins and let gap handle spacing */
+}
+.login-container label {
+  font-size: 24px;
+  color: navy;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px 0 20px 0; /* Center the title */
+  padding: 30px;
+}
+
+.login-container input[type="text"], 
+.login-container input[type="password"] {
+  margin: 20px auto 20px auto; /* Center the title */
+  background-color: rgba(255, 255, 255, 0.341);
+  border: none;
+  border-radius: 4px;
+  width: 90%; /* Flexible width */
+  height: 10%; /* Fixed height */
+  margin: 10px auto;
+  padding: 10px;
+}
+
+
+.login-container button[type="submit"] {
+  background: linear-gradient(90deg, rgb(111, 202, 255), rgb(39, 147, 255),rgba(0, 109, 234, 0.932),rgb(0, 92, 212));
+  color: white;
+  padding: 10px 30px 10px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: auto;
+  display: flex;
+}
+
+
+
+.login-container #forgot-password,
+.login-container #register-here {
+  /* Remove absolute positioning */
+  position: relative;
+  bottom: auto;
+  margin: 20px auto;
+  width: 100%;
+  text-align: center;
+}
+#forgot-password a, #register-here a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #bdddff;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  margin: 10px auto 10px auto; /* Center the title */
+  padding: 10px;
+}
+
+#register-here {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #104278;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  margin: 10px auto 10px auto; /* Center the title */
+  padding: 10px;
+}
+
+.login-alternatives {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  #login {
+    font-size: 26px;
+  }
+  
+  .login-container label {
+    font-size: 20px;
+    margin: 30px 0 15px 0;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  #login {
+    font-size: 15px;
+    margin: 20px auto;
+  }
+  
+  .login-container {
+    padding: 30px 15px;
+    width: 55%;
+  }
+  
+  .login-container label {
+    font-size: 12px;
+    margin: 20px 0 10px 0;
+  }
+  
+  .login-container button[type="submit"] {
+    padding: 8px 25px;
+    width: 30%;
+  }
 }
