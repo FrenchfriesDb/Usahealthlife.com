@@ -287,9 +287,10 @@ a.ctaa i {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background: #4d7a962c;
-    -webkit-backdrop-filter: blur(32px); /* For Safari */
+    background: #124f75b4;
     backdrop-filter: blur(32px); /* Standard */
+    -webkit-backdrop-filter: blur(32px); /* For Safari */
+    
     transition: 0.5s;
   }
   .navlist.open {
