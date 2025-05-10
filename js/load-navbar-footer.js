@@ -1,25 +1,25 @@
-// Load Navbar
+
 fetch('includes/navbar.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('navbar-placeholder').innerHTML = data;
   });
 
-// Load Footer
+// footer lollll
 fetch('includes/footer.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('footer-placeholder').innerHTML = data;
   });
 
-  // Load navbar (your existing code)
+
 fetch('includes/navbar.html')
 .then(response => response.text())
 .then(data => {
   document.getElementById('navbar-placeholder').innerHTML = data;
   
-  // --- NEW CODE: Highlight current tab ---
-  const currentPage = window.location.pathname.split('/').pop(); // Gets "about.html"
+  
+  const currentPage = window.location.pathname.split('/').pop(); 
   const navLinks = document.querySelectorAll('.navbar a');
 
   navLinks.forEach(link => {
