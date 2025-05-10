@@ -324,3 +324,70 @@ a.ctaa i {
   }
 }
 
+@media (max-width:400px){
+  .hero-img img {
+    width: 80%;
+    height: auto;
+    
+  }
+header {
+  background-color: #77a4da1a;
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+}
+
+  section {
+    width: 100%;
+    padding: 0; 
+  }
+  .hero-text h1 {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 35px;
+  }
+  .hero-text p {
+    margin: 5px auto;
+    width: 80%;
+    font-size: 12px;
+  }
+  .hero-text a.ctaa {
+  background: transparent;
+  border: 1px solid #ffffff;
+  margin-left: 20px;
+}
+
+.hero-text a.ctaa i {
+  color: white;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.hero-text a.ctaa {
+  background: transparent;
+  border: 1px solid #ffffff;
+  margin: 5px auto 12px 80px;
+  font-size: 10px;
+}
+
+.hero-text a.ctaa i {
+  color: white;
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 10px;
+}
+.hero-text a.btn {
+  font-size: 10px;
+  margin: 5px auto 12px 50px;
+}
+
+.hero-text a.btn i {
+  color: white;
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 10px;
+}
+
+.hero h4 {
+  margin: 10px 40px 12px;
+}
+}
