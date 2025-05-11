@@ -158,7 +158,7 @@ section {
 .icons {
   position: absolute;
   top: 50%;
-  padding: 0 9%;
+  padding: 0 3%;
   transform: translateY(-50%);
 }
 
