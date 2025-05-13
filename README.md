@@ -34,4 +34,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 
-For questions or feedback, please contact us at support@usahealthlife.com.
+For questions or feedback, please contact us at kongjie.com@gmail.com
