@@ -6,6 +6,24 @@
   font-family: arial, Verdana, Geneva, Tahoma, sans-serif;
   padding: 0;
   margin: 0;
+  
+}
+
+body {
+  background: linear-gradient(245.59deg, #4d8995 0%, #385d70 28.53%, #132b39 75.5%);
+  color: white; /* Optional: Set text color for better contrast */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Verdana, Geneva, Tahoma, sans-serif;
+  
+}
+
+/* Highlight the active link */
+.navlist a.active {
+  color: #ffffff; /* Blue color for the active tab */
+  padding-bottom: 2px;
+  font-weight: bold;
+  border-bottom: 2px solid #052950; /* Optional underline */
 }
 
 header {
@@ -13,17 +31,17 @@ header {
   top: 0;
   right: 0;
   width: 100%;
-  background-color: #fff;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 33px 9%;
-  background: transparent;
+  transition: background-color 0.3s ease; /* Optional smooth transition */
 }
 
 .navlist a i {
   font-size: 19px;
+  
 }
 a.logo {
   font-size: 50px;
@@ -32,6 +50,7 @@ a.logo {
 }
 .navlist {
   display: flex;
+ 
 }
 #menu-icon {
   color: white;
@@ -42,15 +61,17 @@ a.logo {
 
 .navlist a {
   color: white;
-  margin-left: 60px;
+  margin: 0 0 0 60px;
   font-size: 15px;
   font-weight: 600;
   border-bottom: 2px solid transparent;
-  transition: all 0.55s ease;s
+  transition: all 0.55s ease;
+  padding-bottom: 2px;
 }
 
 .navlist a:hover {
   border-bottom: 2px solid white;
+  padding-bottom: 2px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Dancing+Script:wght@400..700&family=Kablammo&family=Playwrite+MX+Guides&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
@@ -199,6 +220,211 @@ a.ctaa i {
   transform: translateY(-5px);
 }
 
+.wrapper {
+  display: flex;
+  gap: 20px;
+  width: 300px;
+  overflow-x: scroll;
+  margin: 80px auto;
+  scroll-snap-type: x mandatory;
+  margin: 30% auto 20% auto;
+}
+
+.card {
+  scroll-snap-align: center;
+  color:black;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  border-radius: 14px;
+  text-align: center;
+  background-color: #ffddf1;
+  width: 300px;
+  flex-shrink: 0;
+  font-family: 'Lucida Sans', sans-serif;
+}
+
+.card:nth-child(1) {
+  background-color: #feffdd;
+}
+
+.card:nth-child(2) {
+  background-color: #e9ffe9;
+}
+.card:nth-child(3) {
+  background-color: #d3e9ff;
+}
+.card:nth-child(4) {
+  background-color: #ffddf1;
+}
+.card:nth-child(5) {
+  background-color: #feffdd;
+}
+.card:nth-child(6) {
+  background-color: #f7d7ff;
+}
+
+#login {
+  /* Remove position: absolute - this was causing overlap */
+  font-size: 20px;
+  text-align: center;
+  color: navy;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0px auto 0px auto;
+  top: -10%;
+}
+
+.login-container {
+  width: 30%; /* Flexible width */
+  max-width: 90%; /* Maximum width */
+  min-width: 50%; /* Minimum width */
+  margin: 40% auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 70vh; /* Adjust height */
+  height: auto; /* Allow height to adjust based on content */
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  padding: 40px 20px; /* Add padding for spacing */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  backdrop-filter: blur(10px); /* Add blur effect */
+
+}
+
+.login-container > * {
+  margin: 10px 0; /* Add spacing between elements */
+  width: 100%; /* Make child elements take full width */
+  text-align: center; /* Center-align text */
+}
+
+.login-container label {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(0, 51, 98);
+  margin: 10px 0; /* Add spacing */
+  text-align: left; /* Align labels to the left */
+}
+
+.login-container input[type="text"], 
+.login-container input[type="password"] {
+  width: 90%; /* Adjust width */
+  padding: 10px; /* Add padding for better usability */
+  margin: 10px 0; /* Add spacing */
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Add border */
+  border-radius: 5px; /* Rounded corners */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+}
+
+.login-container input[type="text"]:focus, .login-container input[type="password"]:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.522);
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.515);
+}
+
+.login-container button[type="submit"] {
+  background: linear-gradient(90deg, rgb(111, 202, 255), rgb(39, 147, 255));
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+  background: rgb(39, 147, 255);
+}
+
+.login-container #forgot-password,
+.login-container #register-here {
+  margin: 10px 0;
+  text-align: center;
+}
+
+#forgot-password a, #register-here a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #bdddff;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  margin: 10px auto 10px auto; /* Center the title */
+  padding: 80px;
+}
+
+#register-here {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #104278;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  margin: 10px auto 10px auto; /* Center the title */
+  padding: 10px;
+}
+
+.login-alternatives {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  #login {
+    font-size: 26px;
+  }
+  
+  .login-container label {
+    font-size: 20px;
+    margin: 30px 0 15px 0;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  #login {
+    font-size: 15px;
+    margin: 20px auto;
+  }
+  
+  .login-container {
+    padding: 30px 15px;
+    width: 55%;
+  }
+  
+  .login-container label {
+    font-size: 12px;
+    margin: 20px 0 10px 0;
+  }
+  
+  .login-container button[type="submit"] {
+    padding: 8px 25px;
+    width: 30%;
+  }
+}
+
+.item button:hover::before {
+  opacity: 1;
+}
+
+
+.item button:active::after {
+  background: transparent;
+}
+
+.item button:active {
+  color: black;
+  font-weight: bold;
+}
+
+
 @media (max-width:1600px) {
   section {
 
@@ -337,6 +563,27 @@ header {
   }
 }
 
+/* Sidebar navigation styles */
+@media (max-width: 990px) {
+  .navlist a {
+  color: white;
+  margin: 0 2px 0 30px;
+  font-size: 13px;
+  font-weight: 600;
+  border-bottom: 2px solid transparent;
+  border-width: 3px;
+  transition: all 0.55s ease;
+  padding-bottom: 2px;
+}
+body {
+  background: linear-gradient(235.59deg, #4d8995 0%, #385d70 28.53%, #132b39 75.5%);
+}
+
+  .navlist a:hover {
+    border-bottom: 2px solid white; /* White border on hover */
+  }
+}
+
 @media (max-width:680px){
   .hero-img img {
     width: 80%;
@@ -353,7 +600,7 @@ header {
     
   }
 header {
-  background-color: #77a4da1a;
+  background-color: #77a4da8b;
   backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);
 }
@@ -440,7 +687,7 @@ header {
 
 @media (max-width: 344px) {
 header {
-  background-color: #77a4da1a;
+  background-color: #77a4da52;
   backdrop-filter: blur(32px);
   -webkit-backdrop-filter: blur(32px);
 }
@@ -530,4 +777,29 @@ a.logo {
  .hero-text {
   margin: auto;
  }
+}
+
+@media (max-width: 431px) {
+  .hero-text {
+    margin-left: 32px;
+  }
+  .hero h1 {
+    font-size: 20px;
+  }
+  .hero-text p {
+    font-size: 11px;
+  }
+  .hero-text h4 {
+    font-size: 10px;
+  }
+  .btn {
+  padding: 2px 5px;
+  margin-bottom: 20px;
+  font-size: 8px;
+  }
+  .ctaa {
+    padding: 2px 5px;
+    margin-bottom: 20px;
+    font-size: 8px;
+  }
 }
