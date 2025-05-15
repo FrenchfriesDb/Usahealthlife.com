@@ -803,3 +803,150 @@ a.logo {
     font-size: 8px;
   }
 }
+
+.item-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Align items to the start */
+  gap: 20px; /* Add spacing between items */
+  margin: 20% auto 20% auto; /* Center the container */
+  max-width: 1200px; /* Limit the container width */
+  padding: 10px; /* Add padding around the container */
+}
+
+/* Style individual items like product cards */
+.item-container > .item {
+  margin: 0 0 0px 0 ; /* Remove extra margin */
+  padding: 15px; /* Add padding inside the card */
+  font-size: 16px; /* Adjust font size */
+  width: 200px; /* Set a fixed width for items */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.195); /* Subtle shadow for depth */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+/* Assign different background colors to each item */
+.item-container > .item:nth-child(1) {
+  background-color: #ffddf1; /* Light red */
+}
+
+.item-container > .item:nth-child(2) {
+  background-color: #e8ffe8; /* Light green */
+}
+
+.item-container > .item:nth-child(3) {
+  background-color: #d3e9ff; /* Light blue */
+}
+
+
+.item-container > .item:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), -2px -2px 10px 1px white; /* Enhance shadow on hover */
+}
+
+.item p {
+  font-family: arial;
+}
+
+
+/* Style the button inside the item */
+.item button {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 15px 20px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+}
+
+
+.item button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #333; /* Blue button */
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.item button::before {
+  content: "";
+  background: linear-gradient(45deg, #FF0000, #FF7300, #FFFA00, #FFFF00, #9AFF00, #00FF00, #00A3FF, #0000FF, #7300FF, #FF00D3, #FF0000);
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(10px);
+  animation: glowing 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0,0;
+  }
+  50% {
+    background-position: 400%,0;
+  }
+  100% {
+    background-position: 0,0;
+  }
+  
+}
+.item button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Style the image inside the item */
+.item > img {
+  width: 100%; /* Make the image fill the card width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 6px; /* Match card's rounded corners */
+  margin-bottom: 10px; /* Add spacing below the image */
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 768px) {
+  #welcome {
+    font-size: 50px;
+  }
+  .item-container > .item {
+    width: 150px; /* Shrink item width for medium screens */
+    font-size: 12px;
+  }
+}
+
+
+
+/* For small screens (mobile phones) */
+@media (max-width: 480px) {
+
+  #welcome {
+    font-size: 30px;
+  }
+  .item-container {
+    justify-content: center; /* Center items on small screens */
+
+  }
+
+  .item-container > .item {
+    width: 120px; /* Further shrink item width for small screens */
+    font-size: 10px; /* Adjust font size for smaller items */
+    padding: 10px; /* Reduce padding */
+  }
+}
